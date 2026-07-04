@@ -66,7 +66,7 @@ export default function SplineBackground({
         inset: 0,
         width: "100%",
         height: "100%",
-        zIndex: 0,
+        zIndex: -1,
         pointerEvents: interactive ? "auto" : "none",
         backgroundColor: "var(--color-ink)", // base background so no white flash
       }}
