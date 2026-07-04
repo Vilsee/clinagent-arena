@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { Crosshair, Bot, ShieldCheck, AlertTriangle, FileCode2, Users } from "lucide-react";
 import ScorecardPreview from "@/components/ScorecardPreview";
+import SplineBackground from "@/components/SplineBackground";
 
 /* ─── Scroll-reveal helpers ─── */
 const sectionVariants = {
@@ -86,30 +87,12 @@ export default function Home() {
       {/* ================================================================
           SECTION 1 — HERO
           ================================================================ */}
+      {/* Fixed 3D Spline Background */}
+      <SplineBackground 
+        scene="https://prod.spline.design/k45B0EK8J3PQFe3y/scene.splinecode"
+        scrimOpacity={0.8}
+      />
       <section className="hero-section">
-        {/* Abstract SVG Background */}
-        <div className="hero-bg-graphic">
-          <svg
-            width="100%"
-            height="100%"
-            viewBox="0 0 1440 800"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            <g opacity="0.06">
-              <path d="M200 150 L600 350 L1000 200 L1300 500" stroke="#4FD1E8" strokeWidth="2" />
-              <path d="M400 600 L600 350 L800 650 L1100 450" stroke="#4FD1E8" strokeWidth="2" />
-              <circle cx="200" cy="150" r="4" fill="#4FD1E8" />
-              <circle cx="600" cy="350" r="6" fill="#4FD1E8" />
-              <circle cx="1000" cy="200" r="5" fill="#4FD1E8" />
-              <circle cx="1300" cy="500" r="4" fill="#4FD1E8" />
-              <circle cx="400" cy="600" r="4" fill="#4FD1E8" />
-              <circle cx="800" cy="650" r="5" fill="#4FD1E8" />
-              <circle cx="1100" cy="450" r="4" fill="#4FD1E8" />
-            </g>
-          </svg>
-        </div>
 
         <motion.div
           className="section-inner hero-grid"

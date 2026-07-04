@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { LEADERBOARD_DATA, LeaderboardEntry } from "@/lib/leaderboard-data";
+import SplineBackground from "@/components/SplineBackground";
 
 /* ─── Animation helpers ─── */
 const fadeUp = {
@@ -69,6 +70,11 @@ export default function LeaderboardPage() {
 
   return (
     <main>
+      {/* Fixed 3D Spline Background */}
+      <SplineBackground 
+        scene="https://prod.spline.design/wsitYn5UkHWG63k2/scene.splinecode"
+        scrimOpacity={0.85}
+      />
       <section className="leaderboard-section">
         <div className="section-inner">
           {/* ── Page Header ── */}

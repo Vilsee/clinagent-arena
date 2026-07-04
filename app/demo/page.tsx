@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { DEMO_SCENARIOS, DemoScenario } from "@/lib/demo-scenarios";
+import SplineBackground from "@/components/SplineBackground";
 
 /* ─── Animation helpers ─── */
 const fadeUp = {
@@ -132,6 +133,11 @@ export default function DemoPage() {
 
   return (
     <main>
+      {/* Fixed 3D Spline Background */}
+      <SplineBackground 
+        scene="https://prod.spline.design/Gm3w5y9PlH-znEYP/scene.splinecode"
+        scrimOpacity={0.85}
+      />
       <section className="demo-section">
         <div className="section-inner">
           {/* ── Page Header ── */}
